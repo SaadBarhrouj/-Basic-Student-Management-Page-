@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: whitesmoke;
+            font-family: "Tajawal", sans-serif;
+        }
+       #mother{
+        width: 100%;
+        font-size: 20px;
+       }
+       main{
+        float: right;
+        border: 1px solid gray;
+       }
+    </style>
+</head>
+
+<body>
+    <div id='mother'>
+
+        <form method="post">
+            <aside>
+                <div>
+                    <img src="" alt="لوجو الموقع">
+
+                    <h3>لوحة المدير</h3>
+
+                    <label>رقم الطالب</label><br>
+                    <input type="text" name="id" id="id"><br>
+
+                    <label>اسم الطالب</label><br>
+                    <input type="text" name="name" id="name"><br>
+
+                    <label>عنوان الطالب</label><br>
+                    <input type="text" name="address" id="address"><br><br>
+
+                    <button name="add">إضافة طالب</button>
+
+                    <button name="del"> حذف طالب</button>
+
+                </div>
+            </aside>
+
+
+
+            <main>
+                <table>
+                    <tr>
+                        <th>الرقم التسلسلي</th>
+                        <th>اسم الطالب</th>
+                        <th>عنوان الطالب</th>
+                    </tr>
+
+                </table>
+            </main>
+
+        </form>
+    </div>
+</body>
+
+</html>
