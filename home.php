@@ -69,7 +69,13 @@
 </head>
 
 <body dir="rtl">
-
+       <?php 
+       $host='localhost';
+       $user='root';
+       $pass='';
+       $db='students';
+       $con=mysqli_conncet($host,$user,$pass,$db);       
+       ?>
     
     <div id='mother'>
 
