@@ -75,21 +75,21 @@
        $user='root';
        $pass='';
        $db='students';
-       $con=mysqli_conncet($host,$user,$pass,$db);
+       $con=mysqli_connect($host,$user,$pass,$db);
        $res=mysqli_query($con,"select * from student");
        $id='';
        $name='';
        $address='';
 
-       if(issset($_POST['id'])){
+       if(isset($_POST['id'])){
         $id=$_POST['id'];
        }
 
-       if(issset($_POST['name'])){
+       if(isset($_POST['name'])){
         $id=$_POST['name'];
        }
        
-       if(issset($_POST['address'])){
+       if(isset($_POST['address'])){
         $id=$_POST['address'];
        }
        $sqls='';
@@ -99,7 +99,16 @@
        $sqls='';
        if (isset($_POST['add'])){
       $sqls="insert into student value($id,'$name','$address')";
+      mysqli_query($con,$sqls);
+       header("location:home.php");
        }
+       
+       if (isset($_POST['del'])){
+        $sqls="delete from student where name ='$name'";
+        mysqli_query($con,$sqls);
+        header("location:home.php");
+         }
+        
        ?>
     
     <div id='mother'>
@@ -136,6 +145,16 @@
                         <th>اسم الطالب</th>
                         <th>عنوان الطالب</th>
                     </tr>
+                     <?php
+                     while($row=mysqli_fetch_array($res)){
+                        echo "<tr>";
+                        echo "<td>".$row['id']."<td>";
+                        echo "<td>".$row['name']."<td>";
+                        echo "<td>".$row['address']."<td>";
+                        echo "</tr>";
+                     }
+
+                     ?> 
 
                 </table>
             </main>
