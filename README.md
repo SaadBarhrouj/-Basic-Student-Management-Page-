@@ -38,7 +38,9 @@ A straightforward and basic web page for managing student records. This simple p
    - Start your local server (e.g., using XAMPP or WAMP)
    - Access the project in your browser at \`http://localhost/basic-student-management-page\`
 
+## Future Enhancements 🌟
 
+This project will be completed and improved by also adding a French version, making it bilingual.
 
 ## Contribution Guidelines 🤝
 
