@@ -70,11 +70,36 @@
 
 <body dir="rtl">
        <?php 
+     
        $host='localhost';
        $user='root';
        $pass='';
        $db='students';
-       $con=mysqli_conncet($host,$user,$pass,$db);       
+       $con=mysqli_conncet($host,$user,$pass,$db);
+       $res=mysqli_query($con,"select * from student");
+       $id='';
+       $name='';
+       $address='';
+
+       if(issset($_POST['id'])){
+        $id=$_POST['id'];
+       }
+
+       if(issset($_POST['name'])){
+        $id=$_POST['name'];
+       }
+       
+       if(issset($_POST['address'])){
+        $id=$_POST['address'];
+       }
+       $sqls='';
+       if (isset($_POST['add'])){
+      $sqls="insert into student value($id,'$name','$address')";
+       }
+       $sqls='';
+       if (isset($_POST['add'])){
+      $sqls="insert into student value($id,'$name','$address')";
+       }
        ?>
     
     <div id='mother'>
